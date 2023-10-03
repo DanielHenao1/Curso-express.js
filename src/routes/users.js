@@ -21,13 +21,18 @@
 const { Router } = require("express");
 const router = Router();
 
-router.get("/UserName", (req, res) => {
-  res.send("UserName route");
-});
+// router.get("/UserName", (req, res) => {
+//   res.send("UserName route");
+// });
 
-router.get("/profile", (req, res) => {
-  console.log(req.body);
-  res.send("Profile page");
+// router.get("/profile", (req, res) => {
+//   console.log(req.body);
+//   res.send("Profile page");
+// });
+
+// Ejemplo con EJS
+router.get("/users", (req, res) => {
+  res.render("users");
 });
 
 module.exports = router;

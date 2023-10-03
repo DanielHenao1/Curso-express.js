@@ -1,0 +1,24 @@
+<%- include('./partials/header.ejs'); %>
+
+<h1><%= title %></h1>
+
+<!-- con EJS puedo utilizar condicionales con esta sintaxias -->
+<% if (isActive) { %>
+<P>El servidor esta activo</P>
+<% }else {%>
+<P>El servidor esta inactivo</P>
+<% } %>
+
+<!-- Tambien puedo llamar codigo de JS -->
+
+<%= new Date() %>
+
+<!-- Tambien puedo llamar un arreglo y pintarlo en pantalla ejemplo vamos a pintar un array desde home.js -->
+
+<ul>
+  <% for(let i =0; i < users.length; i++) { %>
+  <li><%= users[i].name %> <%= users[i].lastname %></li>
+  <% } %>
+</ul>
+
+<%- include('./partials/footer.ejs'); %>
